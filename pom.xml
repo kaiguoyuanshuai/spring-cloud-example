@@ -12,6 +12,7 @@
     <modules>
         <module>spring-cloud-example-api</module>
         <module>spring-cloud-example-provider</module>
+        <module>spring-cloud-example-provider02</module>
         <module>spring-cloud-example-consumer</module>
     </modules>
 
