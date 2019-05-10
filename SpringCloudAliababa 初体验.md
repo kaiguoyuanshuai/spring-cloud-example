@@ -6,6 +6,8 @@
 - Sentinel 
 - Nacos 
 - Dubbo Ops 
+- Druid
+- Mybatis
 ## 最终效果 
 
 ## 初体验
@@ -104,3 +106,16 @@ logging.level.com.zcoco.springcloud.alibaba.repertory.mapper=debug
 日志打印配置
 
 
+
+
+### 集成 `seata`
+
+> https://github.com/spring-cloud-incubator/spring-cloud-alibaba/blob/master/spring-cloud-alibaba-examples/seata-example/readme-zh.md
+
+```xml
+ <dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
+</dependency>
+
+```
