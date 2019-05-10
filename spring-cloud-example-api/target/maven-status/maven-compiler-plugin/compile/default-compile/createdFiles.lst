@@ -1,0 +1,2 @@
+com\zcoco\springcloud\alibaba\api\EchoService.class
+com\zcoco\springcloud\alibaba\api\EchoServiceFallback.class

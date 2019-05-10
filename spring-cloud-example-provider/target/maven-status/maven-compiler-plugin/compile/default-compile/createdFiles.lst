@@ -1,0 +1,6 @@
+com\zcoco\springcloud\alibaba\ProviderBootstrap.class
+com\zcoco\springcloud\alibaba\repertory\mapper\vo\User.class
+com\zcoco\springcloud\alibaba\TestConfig.class
+com\zcoco\springcloud\alibaba\config\MybatisConfig.class
+com\zcoco\springcloud\alibaba\DefaultDemoService.class
+com\zcoco\springcloud\alibaba\repertory\mapper\UserMapper.class
