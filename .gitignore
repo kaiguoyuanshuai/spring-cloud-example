@@ -1,0 +1,26 @@
+#java source
+*.class
+*.war
+*.ear
+*.bak
+*.log
+#eclipse
+*.myeclipse
+.project
+.classpath
+target/
+target/*
+.settings/
+.settings/*
+#idea
+.idea/
+.idea/*
+*.iml
+#project
+.myeclipse
+nacos/bin/
+nacos/
+nacos/bin/*
+nacos/*
+derby-data/*
+naming/*
