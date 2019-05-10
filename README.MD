@@ -46,6 +46,13 @@ java -Dserver.port=7777  -jar dubbo-admin-0.1.jar
     http://localhost:7777
 ```
 
+### 启动 `seata` 
+- run seata 
+```
+sh seata-server.sh 8091 file
+```
+
+
 ### 安装 `RabbitMQ` (Window) 
 - 安装 `erlang` 
 
