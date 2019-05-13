@@ -81,7 +81,7 @@ public class DataSourceConfig extends MybatisProperties {
      */
     @Bean
     public GlobalTransactionScanner globalTransactionScanner(){
-        return new GlobalTransactionScanner("storage-gts-fescar-example", "my_test_tx_group");
+        return new GlobalTransactionScanner("service-provider02", "my_test_tx_group");
     }
 
 }

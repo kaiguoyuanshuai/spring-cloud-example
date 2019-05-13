@@ -111,11 +111,68 @@ logging.level.com.zcoco.springcloud.alibaba.repertory.mapper=debug
 ### 集成 `seata`
 
 > https://github.com/spring-cloud-incubator/spring-cloud-alibaba/blob/master/spring-cloud-alibaba-examples/seata-example/readme-zh.md
+> https://github.com/seata/seata-samples/tree/master/nacos
 
 ```xml
  <dependency>
     <groupId>org.springframework.cloud</groupId>
     <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
 </dependency>
+```
+
+下载 seata (注意版本 )
+```
+unzip XXXXseata.zip 
+```
+修改配置 
+file.conf
+```
+service {
+  #vgroup->rgroup
+  #my_test_tx_group 需要与 GlobalTransactionScanner 第二个参数一致
+  vgroup_mapping.my_test_tx_group = "default"
+  #only support single node
+  #配置成远程服务器的地址
+  default.grouplist = "47.98.131.177:8091"
+  #degrade current not support
+  enableDegrade = false
+  #disable
+  disable = false
+}
 
 ```
+registry.conf
+```
+registry {
+  # file nacos
+  type = "nacos"
+  nacos {
+    serverAddr = "47.98.131.177"
+    namespace = "public"
+    cluster = "default"
+  }
+  file {
+    name = "file.conf"
+  }
+}
+config {
+    type = "nacos"
+    nacos {
+        serverAddr = "47.98.131.177"
+        namespace = "public"
+        cluster = "default"
+    }
+}
+```
+执行 nacos-config.sh
+```
+sh nacos-config.sh localhost
+```
+
+启动 seata
+
+```
+sh seata-server.sh 8091 file 47.98.131.177 
+```
+- 最后一个IP地址需要制定，不然会使用内部IP 导致无法访问的问题
+
