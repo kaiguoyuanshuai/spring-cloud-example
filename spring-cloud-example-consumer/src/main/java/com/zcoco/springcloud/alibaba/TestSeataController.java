@@ -1,6 +1,5 @@
 package com.zcoco.springcloud.alibaba;
 
-import com.alibaba.fescar.spring.annotation.GlobalTransactional;
 import com.zcoco.springcloud.alibaba.api.CityService;
 import com.zcoco.springcloud.alibaba.api.EchoService;
 import com.zcoco.springcloud.alibaba.api.vo.City;
@@ -26,19 +25,21 @@ public class TestSeataController {
     @Reference
     private CityService cityService;
 
-    @GlobalTransactional(timeoutMills = 3000, name = "my_test_tx_group")
+    //@GlobalTransactional(timeoutMills = 3000, name = "my_test_tx_group")
     @RequestMapping("/dubbo")
     public String seata() {
-        User user = new User();
-        user.setUserName("name");
-        user.setAge(10);
-        int userResult = echoService.saveUser(user);
-        LOGGER.info("result" + userResult);
         City city = new City();
         city.setCityAddress(0);
         city.setCityName("杭州");
         int cityResult = cityService.saveCity(city);
         LOGGER.info("cityResult" + cityResult);
+
+        User user = new User();
+        user.setUserName("name");
+        user.setAge(10);
+        int userResult = echoService.saveUser(user);
+        LOGGER.info("result" + userResult);
+
         if (cityResult + userResult < 0) {
             throw new RuntimeException("执行出错");
         }

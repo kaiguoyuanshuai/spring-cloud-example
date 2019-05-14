@@ -1,11 +1,11 @@
 package com.zcoco.springcloud.alibaba;
 
-import com.alibaba.fescar.spring.annotation.GlobalTransactional;
 import com.zcoco.springcloud.alibaba.api.CityService;
 import com.zcoco.springcloud.alibaba.api.vo.City;
 import com.zcoco.springcloud.alibaba.repertory.mapper.CityMapper;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 /*
  * 描述:
@@ -20,7 +20,7 @@ public class CityServiceImpl implements CityService {
     private CityMapper cityMapper;
 
     @Override
-    @GlobalTransactional
+    // @GlobalTransactional
     public String getCityName() {
         City byIdCity = cityMapper.findById("1");
         if (byIdCity != null) {
@@ -30,6 +30,7 @@ public class CityServiceImpl implements CityService {
     }
 
     @Override
+    @Transactional
     public int saveCity(City city) {
         return cityMapper.saveCity(city);
     }

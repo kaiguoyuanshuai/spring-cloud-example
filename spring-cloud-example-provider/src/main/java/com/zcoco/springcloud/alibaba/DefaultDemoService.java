@@ -8,6 +8,7 @@ import org.apache.dubbo.config.annotation.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 /*
  * 描述:
@@ -36,6 +37,7 @@ public class DefaultDemoService implements EchoService {
     }
 
     @Override
+    @Transactional
     public int saveUser(User user) {
         int result = userMapper.saveUser(user);
         if (testConfig.isError() | result < 1) {

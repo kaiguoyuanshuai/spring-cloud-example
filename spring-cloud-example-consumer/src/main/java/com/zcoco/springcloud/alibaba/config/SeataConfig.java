@@ -1,7 +1,5 @@
 package com.zcoco.springcloud.alibaba.config;
 
-import com.alibaba.fescar.spring.annotation.GlobalTransactionScanner;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -17,8 +15,8 @@ public class SeataConfig {
      *
      * @Return: GlobalTransactionScanner
      */
-    @Bean
+/*    @Bean
     public GlobalTransactionScanner globalTransactionScanner(){
         return new GlobalTransactionScanner("service-consumer", "my_test_tx_group");
-    }
+    }*/
 }
