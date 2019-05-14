@@ -1,7 +1,9 @@
 package com.zcoco.springcloud.alibaba;
 
+import com.zcoco.springcloud.alibaba.config.TestConfig;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.ComponentScan;
 
@@ -13,6 +15,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @EnableDiscoveryClient
 @EnableAutoConfiguration
+@EnableConfigurationProperties(TestConfig.class)
 @ComponentScan(basePackages = "com.zcoco.springcloud")
 public class ProviderBootstrap {
 
