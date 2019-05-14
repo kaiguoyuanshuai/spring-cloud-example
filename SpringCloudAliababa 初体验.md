@@ -174,5 +174,5 @@ sh nacos-config.sh localhost
 ```
 sh seata-server.sh 8091 file 47.98.131.177 
 ```
-- 最后一个IP地址需要制定，不然会使用内部IP 导致无法访问的问题
+- 最后一个IP地址需要制定，不然会使用服务器内网IP 导致本地无法访问的问题
 
