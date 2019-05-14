@@ -3,7 +3,11 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zcoco.springcloud.alibaba.repertory.mapper.CityMapper">
-    <select id="findById" resultType="City">
-        SELECT * FROM USER WHERE id = #{id}
+    <select id="findById" resultType="com.zcoco.springcloud.alibaba.api.vo.City">
+        SELECT * FROM City WHERE id = #{id}
     </select>
+
+    <insert id="saveCity" useGeneratedKeys="true"  keyProperty="id">
+        INSERT INTO City (cityName,cityAddress) values(#{cityName},#{cityAddress})
+    </insert>
 </mapper>

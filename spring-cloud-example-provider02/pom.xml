@@ -58,15 +58,14 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>io.seata</groupId>-->
-<!--            <artifactId>seata-spring</artifactId>-->
-<!--            <version>0.5.1</version>-->
-<!--        </dependency>-->
-        <!-- spring-cloud-starter-alibaba-seata -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.seata</groupId>
+            <artifactId>seata-spring</artifactId>
         </dependency>
 
         <dependency>

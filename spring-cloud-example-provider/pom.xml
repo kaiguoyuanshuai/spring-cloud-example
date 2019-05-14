@@ -59,6 +59,16 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.seata</groupId>
+            <artifactId>seata-spring</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>com.kaiguoyuanshuai.xiaogaogao</groupId>
             <artifactId>spring-cloud-example-api</artifactId>
             <version>1.0.0-SNAPSHOT</version>

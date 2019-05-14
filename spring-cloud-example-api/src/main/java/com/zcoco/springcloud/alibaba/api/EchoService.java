@@ -6,6 +6,7 @@ package com.zcoco.springcloud.alibaba.api;
  * @time 2019/4/24
  */
 
+import com.zcoco.springcloud.alibaba.api.vo.User;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
@@ -16,4 +17,6 @@ public interface  EchoService {
 
     @GetMapping(value = "/echo/{message}")
     String echo(@PathVariable("message") String message);
+
+    int saveUser(User user);
 }
