@@ -4,6 +4,7 @@ import com.zcoco.springcloud.alibaba.api.CityService;
 import com.zcoco.springcloud.alibaba.api.EchoService;
 import com.zcoco.springcloud.alibaba.api.vo.City;
 import com.zcoco.springcloud.alibaba.api.vo.User;
+import io.seata.spring.annotation.GlobalTransactional;
 import org.apache.dubbo.config.annotation.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,7 +26,7 @@ public class TestSeataController {
     @Reference
     private CityService cityService;
 
-    //@GlobalTransactional(timeoutMills = 3000, name = "my_test_tx_group")
+    @GlobalTransactional(timeoutMills = 3000, name = "my_test_tx_group")
     @RequestMapping("/dubbo")
     public String seata() {
         City city = new City();
