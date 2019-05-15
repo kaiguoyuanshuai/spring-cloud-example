@@ -1,5 +1,7 @@
 package com.zcoco.springcloud.alibaba.api;
 
+import com.zcoco.springcloud.alibaba.api.vo.City;
+
 /*
  * 描述:
  * @auth zhengkk19738
@@ -8,4 +10,6 @@ package com.zcoco.springcloud.alibaba.api;
 public interface CityService {
 
     String getCityName() ;
+
+    int saveCity(City city) ;
 }

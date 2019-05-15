@@ -1,12 +1,15 @@
-package com.zcoco.springcloud.alibaba.repertory.mapper.vo;
+package com.zcoco.springcloud.alibaba.api.vo;
+
+import java.io.Serializable;
 
 /*
  * 描述:
  * @auth zhengkk19738
  * @time 2019/5/10
  */
-public class User {
+public class User  implements Serializable {
 
+    private static final long serialVersionUID = 3626573890607037226L;
     String id;
 
     String userName ;

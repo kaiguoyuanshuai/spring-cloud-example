@@ -46,6 +46,13 @@ java -Dserver.port=7777  -jar dubbo-admin-0.1.jar
     http://localhost:7777
 ```
 
+### 启动 `seata` 
+- run seata 
+```
+sh seata-server.sh 8091 file
+```
+
+
 ### 安装 `RabbitMQ` (Window) 
 - 安装 `erlang` 
 
@@ -197,5 +204,15 @@ java.lang.NullPointerException: null
     }
 ```
 
+- `seata` 神坑 
+版本问题 ： 
 
+```xml
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
+        </dependency>
+    
+```
+该版本的SEATA 版本为0.4.2 最新版本为0.5.x 内部的 GROUP 由 FESCAR_GROUP 修改为 SEATA_GROUP 造成无法获取到服务器配置
 

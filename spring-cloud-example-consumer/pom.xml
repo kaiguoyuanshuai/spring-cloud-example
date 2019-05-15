@@ -37,7 +37,20 @@
             <artifactId>spring-boot-actuator</artifactId>
         </dependency>
 
-        <!-- application dependence -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.seata</groupId>
+            <artifactId>seata-spring</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.seata</groupId>
+            <artifactId>seata-dubbo</artifactId>
+        </dependency>
+<!--         application dependence-->
 
         <dependency>
             <groupId>com.kaiguoyuanshuai.xiaogaogao</groupId>
